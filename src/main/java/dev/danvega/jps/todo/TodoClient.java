@@ -8,7 +8,6 @@ import org.springframework.web.client.RestClient;
 
 import java.util.List;
 
-@Component
 public class TodoClient {
 
     private static final Logger log = LoggerFactory.getLogger(TodoClient.class);

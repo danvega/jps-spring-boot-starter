@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=dev.danvega.jps.JsonPlaceholderServiceConfiguration
+dev.danvega.jps.JsonPlaceholderServiceConfiguration
