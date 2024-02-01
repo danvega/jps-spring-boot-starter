@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+dev.danvega.jps.JsonPlaceholderServiceConfiguration=\
+dev.danvega.jps.JsonPlaceholderServiceProperties=\
+dev.danvega.jps.todo.Todo=\
+dev.danvega.jps.todo.TodoClient=\
