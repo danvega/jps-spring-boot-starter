@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
-@RestClientTest(TodoClient.class)
+@RestClientTest(JpsTodoClient.class)
 @Import(JsonPlaceholderServiceConfiguration.class)
 class TodoClientTest {
 
@@ -25,7 +25,7 @@ class TodoClientTest {
     MockRestServiceServer server;
 
     @Autowired
-    TodoClient todoClient;
+    JpsTodoClient todoClient;
 
     @Autowired
     ObjectMapper objectMapper;
