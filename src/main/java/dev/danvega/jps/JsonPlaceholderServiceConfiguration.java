@@ -1,5 +1,6 @@
 package dev.danvega.jps;
 
+import dev.danvega.jps.todo.JpsTodoClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
@@ -20,7 +21,7 @@ public class JsonPlaceholderServiceConfiguration {
     }
 
     @Bean
-    JpsTodoClient todoClient(RestClient restClient) {
+    JpsTodoClient jpsTodoClient(RestClient restClient) {
         return new JpsTodoClient(restClient);
     }
 

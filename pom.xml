@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>dev.danvega</groupId>
 	<artifactId>jps-spring-boot-starter</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>jps-spring-boot-starter</name>
 	<description>Spring Boot Starter for JsonPlaceholder Service</description>
 	<properties>
