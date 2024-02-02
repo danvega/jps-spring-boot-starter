@@ -1,4 +1,4 @@
-package dev.danvega.jps.todo;
+package dev.danvega.jps;
 
 public record Todo(Integer userId, Integer id, String title, Boolean completed) {
 }
