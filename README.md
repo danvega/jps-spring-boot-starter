@@ -11,7 +11,7 @@ To use this starter you will need to add the following dependency to your projec
 <dependency>
     <groupId>dev.danvega</groupId>
     <artifactId>jps-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -19,7 +19,7 @@ And configure the following properties in your `application.properties` file. Th
 want to run JsonPlaceHolder Service locally or in a different environment. If you don't configure one the default will be used.
 
 ```properties
-json.placeholder-service.base-url=https://jsonplaceholder.typicode.com
+json-placeholder-service.base-url=https://jsonplaceholder.typicode.com
 ```
 
 ## What's next 
