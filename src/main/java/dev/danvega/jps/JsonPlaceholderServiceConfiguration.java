@@ -1,6 +1,5 @@
 package dev.danvega.jps;
 
-import dev.danvega.jps.todo.JpsTodoClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
@@ -25,12 +24,10 @@ public class JsonPlaceholderServiceConfiguration {
         return new JpsTodoClient(restClient);
     }
 
-    @Bean
+    @Bean("jsonPlaceholderRestClient")
     RestClient restClient(RestClient.Builder builder) {
-        String baseUrl = jpsProperties.baseUrl() ==
-                null ? "https://jsonplaceholder.typicode.com" : jpsProperties.baseUrl();
         return builder
-                .baseUrl(baseUrl)
+                .baseUrl(jpsProperties.baseUrl())
                 .build();
     }
 
