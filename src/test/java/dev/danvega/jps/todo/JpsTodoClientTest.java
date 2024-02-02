@@ -28,7 +28,7 @@ class JpsTodoClientTest {
 
     @Test
     void shouldContainDefaultBaseUrl() {
-        this.contextRunner
+        contextRunner
                 .run((context) -> {
                     assertThat(context).hasSingleBean(JsonPlaceholderServiceProperties.class);
                     assertThat(context.getBean(JsonPlaceholderServiceProperties.class).baseUrl()).isEqualTo("https://jsonplaceholder.typicode.com");
@@ -37,21 +37,20 @@ class JpsTodoClientTest {
 
     @Test
     void shouldSetCustomBaseUrl() {
-        this.contextRunner
+        contextRunner
                 .withPropertyValues("json-placeholder-service.base-url=https://localhost:3000")
                 .run((context) -> {
-            assertThat(context).hasSingleBean(JsonPlaceholderServiceProperties.class);
-            assertThat(context.getBean(JsonPlaceholderServiceProperties.class).baseUrl()).isEqualTo("https://localhost:3000");
-        });
+                    assertThat(context).hasSingleBean(JsonPlaceholderServiceProperties.class);
+                    assertThat(context.getBean(JsonPlaceholderServiceProperties.class).baseUrl()).isEqualTo("https://localhost:3000");
+                });
     }
 
     @Test
     void shouldFindAllTodos() {
-        this.contextRunner
+        contextRunner
                 .run((context) -> {
                     JpsTodoClient todoClient = context.getBean(JpsTodoClient.class);
-                    List<Todo> todos = todoClient.findAll();
-                    assertEquals(200, todos.size());
+                    assertEquals(200, todoClient.findAll().size());
                 });
     }
 
